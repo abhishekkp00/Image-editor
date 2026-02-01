@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="left"> 
+                <div class="top"> 
+                    <label for="imageInput" class="btn">
+                        Choose image
+                        <input type="file" id="imageInput" accept="image/*" hidden />
+                    </label>
+                    <button class="btn" id="reset-btn">Reset</button>
+                    <button class="btn" id = "download-btn">Download</button>
+                </div>
+                <div class="bottom">
+                    <div class="placeholder">
+                        <i class="ri-image-line"></i>
+                        <p>No image selected</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Filters</h2>
+                <div class="filters-container">
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>brightness</p>
+                            <span class="filter-value" id="brightness-value">100</span>
+                        </div>
+                        <input name="brightness" value="100" type="range" id="brightness" min="0" max="200"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>contrast</p>
+                            <span class="filter-value" id="contrast-value">100</span>
+                        </div>
+                        <input name="contrast" value="100" type="range" id="contrast" min="0" max="200"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>saturation</p>
+                            <span class="filter-value" id="saturation-value">100</span>
+                        </div>
+                        <input name="saturation" value="100" type="range" id="saturation" min="0" max="200"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>hueRotation</p>
+                            <span class="filter-value" id="hue-rotate-value">0</span>
+                        </div>
+                        <input name="hue-rotate" value="0" type="range" id="hue-rotate" min="0" max="360"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>blur</p>
+                            <span class="filter-value" id="blur-value">0</span>
+                        </div>
+                        <input name="blur" value="0" type="range" id="blur" min="0" max="20"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>grayscale</p>
+                            <span class="filter-value" id="grayscale-value">0</span>
+                        </div>
+                        <input name="grayscale" value="0" type="range" id="grayscale" min="0" max="100"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>sepia</p>
+                            <span class="filter-value" id="sepia-value">0</span>
+                        </div>
+                        <input name="sepia" value="0" type="range" id="sepia" min="0" max="100"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>opacity</p>
+                            <span class="filter-value" id="opacity-value">100</span>
+                        </div>
+                        <input name="opacity" value="100" type="range" id="opacity" min="0" max="100"/>
+                    </div>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <p>invert</p>
+                            <span class="filter-value" id="invert-value">0</span>
+                        </div>
+                        <input name="invert" value="0" type="range" id="invert" min="0" max="100"/>
+                    </div>
+                </div>
+                
+                <h2>Presets</h2>
+                <div class="presets-container">
+                    <button class="preset-btn" data-preset="drama">drama</button>
+                    <button class="preset-btn" data-preset="vintage">vintage</button>
+                    <button class="preset-btn" data-preset="oldSchool">oldSchool</button>
+                    <button class="preset-btn" data-preset="cyberpunk">cyberpunk</button>
+                    <button class="preset-btn" data-preset="softGlow">softGlow</button>
+                    <button class="preset-btn" data-preset="noir">noir</button>
+                    <button class="preset-btn" data-preset="warmSunset">warmSunset</button>
+                    <button class="preset-btn" data-preset="coolTone">coolTone</button>
+                    <button class="preset-btn" data-preset="faded">faded</button>
+                    <button class="preset-btn" data-preset="retroPop">retroPop</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

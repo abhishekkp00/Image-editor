@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    background-color: var(--bg-primary-color); /* use bg color variable from theme.css */
+    color: var(--text-primary-color); /* use text color variable from theme.css */
+}
+
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main{
+    width: 100%;
+}
+
+main section{
+    width: 100%;
+    padding: var(--padding-2xl); /* use padding variable from theme.css */
+    display: flex;
+    gap: var(--gutter-lg); /* use gutter variable from theme.css */
+
+}
+
+.btn{
+    padding: var(--padding-sm) var(--padding-lg);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-active-color);
+    cursor: pointer;
+    color: var(--text-active-color);
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#reset-btn{
+    background-color:var(--bg-danger-color);
+    color: var(--text-primary-color);
+}
+
+#reset-btn:hover{
+    background-color: rgb(220, 70, 63);
+}
+
+#download-btn{
+    background-color:var(--bg-success-color);
+    color: var(--text-primary-color);
+    font-weight: bold;
+}
+
+#download-btn:hover{
+    background-color: rgb(70, 190, 100);
+}
+
+main section .left{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-lg); /* use gutter variable from theme.css */
+    margin-bottom: var(--margin-2xl); /* use margin variable from theme.css */
+    width: 70%;
+    align-items: center;
+}
+
+main section .right{
+    width: 30%;
+    background-color: var(--bg-secondary-color);
+    padding: var(--padding-xl);
+    border-radius: var(--border-radius-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-md);
+    overflow-y: auto;
+    max-height: 90vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main section .right h2{
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--margin-sm);
+    margin-top: var(--margin-md);
+}
+
+main section .right h2:first-child{
+    margin-top: 0;
+}
+
+main section .right .filters-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-md);
+}
+
+main section .right .filter{
+    width: 100%;
+    padding: var(--padding-sm) 0;
+}
+
+main section .right .filter .filter-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--margin-md);
+}
+
+main section .right .filter p{
+    font-size: var(--font-size-md);
+    color: var(--text-primary-color);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+main section .right .filter .filter-value{
+    font-size: var(--font-size-sm);
+    color: #ef4444;
+    font-weight: 600;
+    background-color: rgba(239, 68, 68, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--border-radius-sm);
+    min-width: 35px;
+    text-align: center;
+}
+
+main section .bottom{
+    background-color: var(--bg-secondary-color);
+    width: 100%;
+    padding: var(--padding-2xl);
+    aspect-ratio: 5/3;
+    border-radius: var(--border-radius-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+main section .bottom .placeholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.6;
+    gap: var(--gutter-md); /* use gutter variable from theme.css */
+    
+}
+
+main section .bottom .placeholder i{
+    font-size: 10rem; 
+    margin-bottom: var(--margin-lg); /* use margin variable from theme.css */
+}
+
+main section .bottom .placeholder p{
+    font-size: var(--font-size-lg); /* use font size variable from theme.css */
+}
+
+
+
+main section .right .filter input{
+    width: 100%;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    height: 3px;
+}
+
+main section .right .filter input::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--bg-primary-color), var(--text-tertiary-color));
+    height: 3px;
+    border-radius: 2px;
+}
+
+main section .right .filter input::-webkit-slider-thumb {
+    cursor: pointer;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    border: 3px solid #ef4444;
+    margin-top: -7.5px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    transition: all 0.2s ease;
+}
+
+main section .right .filter input::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 12px rgba(239, 68, 68, 0.6);
+}
+
+main section .right .filter input::-moz-range-track {
+    background: linear-gradient(to right, var(--bg-primary-color), var(--text-tertiary-color));
+    height: 3px;
+    border-radius: 2px;
+}
+
+main section .right .filter input::-moz-range-thumb {
+    cursor: pointer;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    border: 3px solid #ef4444;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    transition: all 0.2s ease;
+}
+
+main section .right .filter input::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 12px rgba(239, 68, 68, 0.6);
+}
+
+main section .right .presets-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter-sm);
+    margin-bottom: var(--margin-lg);
+}
+
+main section .right .preset-btn{
+    padding: var(--padding-md) var(--padding-sm);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+main section .right .preset-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+main section .right .preset-btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+main section .right .preset-btn:hover{
+    background-color: var(--bg-active-color);
+    color: var(--text-active-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-color: var(--bg-active-color);
+}
+
+main section .right .preset-btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom scrollbar */
+main section .right::-webkit-scrollbar {
+    width: 8px;
+}
+
+main section .right::-webkit-scrollbar-track {
+    background: var(--bg-primary-color);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+main section .right::-webkit-scrollbar-thumb {
+    background: var(--text-tertiary-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+main section .right::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary-color);
+}
+
+main section .bottom canvas{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+main section .bottom canvas:hover{
+    transform: scale(1.01);
+}
+
+main section .bottom canvas.hidden{
+    display: none;
+}
+
+/* Placeholder animation */
+main section .bottom .placeholder{
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+}
+
+/* Top buttons container */
+main section .top{
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
